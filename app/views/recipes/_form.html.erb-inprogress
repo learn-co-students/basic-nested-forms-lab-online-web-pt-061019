@@ -7,14 +7,7 @@
   <br>
 
   <%= f.label :ingredients %>
-  <%= f.fields_for :ingredients do |inner_form| %>
-    <%= inner_form.label :name %>
-    <%= inner_form.text_field :name %><br/>
-
-    <%= inner_form.label :quantity %>
-    <%= inner_form.text_field :quantity %><br/>
-  <% end %>
-  <!-- <br>
+  <br>
   <input name="recipe[recipe_ingredients][][name]">
   <input name="recipe[recipe_ingredients][][quantity]">
 
@@ -22,8 +15,9 @@
   <input name="recipe[recipe_ingredients][][name]">
   <input name="recipe[recipe_ingredients][][quantity]">
 
-  <br> -->
+  <br>
   <%= f.submit %>
 
+  <%= puts params %>
 
 <% end %>
